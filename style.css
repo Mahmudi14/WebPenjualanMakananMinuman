@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+
+.wrapper {
+    height: 60px;
+    width: 60%; 
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.2), -2px 0px 4px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.2), 0px -2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+
+.wrapper.show{
+    transform: translateY(0);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.navigation li a {
+    margin: 80px;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.navigation li a:hover{
+    color: crimson;
+}
+
+.bodyproduct {
+    background-color: white;
+}
+
+.productlist{
+    display: flex;
+    height: 100;
+    width: 100%;
+    justify-content: center;
+    margin-top:20px;
+}
+
+.garisproduct{
+    height:10px;
+    width: 100%;
+}
+
+.garisproduct > hr {
+    margin-left: 47%;
+    width:70px;
+    border-top: 4px solid #000;
+    margin-top: 10px;
+}
+
+.daftarproduct {
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    grid-gap: 40px;
+    padding-bottom: 40px;
+}
+
+img {
+    height:200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.daftarproduct > article {
+    box-shadow: 0 0 5px 0px black;
+    border-radius: 20px;
+    text-align: center;
+    width: 200px;
+    transition: scale (0);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+.daftarproduct > article img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.daftarproduct > article:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width:768px) {
+    .garisproduct{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.isicontact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.a {
+    display: flex;justify-content: center;
+    height: 100;
+    width: 100%;
+}
+
+.b {
+    width:70px;
+    border-top: 4px solid #000;
+    margin-top: 10px;
+}
+
+.tabelcontact {
+    padding: 4px;
+}
+
+.tabelcontact input {
+    color: #101010;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.inputemail {
+    width: 345px;
+}
+
+.input1 {
+    width: 170px;
+}
+
+button {
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 140px;
+    border: 6;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    border-color: black;
+}
+
+.tabelcontact tr {
+    height: 25px;
+}
+
+textarea {
+    color: black;
+}
+
+button:active {
+    opacity: 30%;
+}
+
+.floatingButton {
+    position: fixed;
+    bottom: 10px;
+    right: -450px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    z-index: 100;
+    background: transparent;
+    transition: transform 0.3s;
+}
+
+.floatingButton > img {
+    width: 7%;
+    height: 7%;
+}
